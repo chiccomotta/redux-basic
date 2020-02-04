@@ -1,6 +1,7 @@
-const INCREMENT = 'INCREMENT'
-const DECREMENT = 'DECREMENT'
-const RESET = 'RESET'
+export const INCREMENT = "INCREMENT"
+export const DECREMENT = "DECREMENT"
+export const RESET = "RESET"
+export const INCREMENT_BY_10 = "INCREMENT_BY_10"
 
 export const doIncrement = () => {
   return { type: INCREMENT }
@@ -10,4 +11,7 @@ export const doDecrement = () => {
 }
 export const doReset = () => {
   return { type: RESET }
+}
+export const doIncrementBy10 = () => {
+  return { type: INCREMENT_BY_10 }
 }
