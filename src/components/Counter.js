@@ -15,13 +15,21 @@ class Counter extends Component {
   render() {
     const { value, increment, decrement, reset, increment10 } = this.props
     return (
-      <p>
+      <div>
+        <button type="button" className="btn btn-primary" onClick={increment}>
+          +
+        </button>
+        <button type="button" className="btn btn-primary" onClick={decrement}>
+          -
+        </button>
+        <button type="button" className="btn btn-success" onClick={reset}>
+          RESET
+        </button>
+        <button type="button" className="btn btn-warning" onClick={increment10}>
+          INCREMENT by 10
+        </button>
         Clicked: {value} times &nbsp;
-        <button onClick={increment}>+</button>{" "}
-        <button onClick={decrement}>-</button>{" "}
-        <button onClick={reset}>RESET</button>{" "}
-        <button onClick={increment10}>INCREMENT by 10</button>{" "}
-      </p>
+      </div>
     )
   }
 }
