@@ -8,7 +8,7 @@ import counter from "./reducers"
 import "./site.css"
 
 const store = createStore(counter)
-const rootEl = document.getElementById("root")
+
 
 render(
   <Provider store={store}>
@@ -17,5 +17,5 @@ render(
       <Label />
     </div>
   </Provider>,
-  rootEl
+  document.getElementById("root")
 )
