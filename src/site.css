@@ -23,3 +23,16 @@ div.container p {
   margin-right: -50%;
   transform: translate(-50%, -50%);
 }
+
+div.container-red p {
+  border: 1px solid black;
+  font-size: 2em;
+  margin: 0;
+  padding: 20px;
+  background: red;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
