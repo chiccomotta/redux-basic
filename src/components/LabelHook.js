@@ -5,7 +5,7 @@ import { doReset } from "../reducers/actions"
 const LabelHook = () => {
   // useSelector is analogous to connect’s mapStateToProps. You pass it a function that takes the Redux store state
   // and returns the pieces of state you’re interested in.
-  const value = useSelector(state => state)
+  const value = useSelector(state => state.counter)
 
   // useDispatch replaces connect’s mapDispatchToProps but is lighter weight. All it does is return your store’s dispatch method
   // so you can manually dispatch actions.
@@ -22,6 +22,17 @@ const LabelHook = () => {
             onClick={() => dispatch(doReset())}
           >
             Reset
+          </button>
+        </div>
+        <div>
+          <button
+            type="button"
+            className="btn btn-warning"
+            onClick={() =>
+              dispatch({ type: "ADD_NOTE", note: "sono la prima nota" })
+            }
+          >
+            ADD NOTE
           </button>
         </div>
       </p>
