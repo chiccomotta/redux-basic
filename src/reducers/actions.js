@@ -16,3 +16,6 @@ export const doReset = () => {
 export const doIncrementBy10 = () => {
   return { type: INCREMENT_BY_10 }
 }
+export const AddNote = note => {
+  return { type: ADD_NOTE, note: note }
+}

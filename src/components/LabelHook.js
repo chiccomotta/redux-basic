@@ -1,6 +1,6 @@
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { doReset } from "../reducers/actions"
+import { AddNote, doReset } from "../reducers/actions"
 
 const LabelHook = () => {
   // useSelector is analogous to connect’s mapStateToProps. You pass it a function that takes the Redux store state
@@ -28,9 +28,7 @@ const LabelHook = () => {
           <button
             type="button"
             className="btn btn-warning"
-            onClick={() =>
-              dispatch({ type: "ADD_NOTE", note: "sono la prima nota" })
-            }
+            onClick={() => dispatch(AddNote("prima nota"))}
           >
             ADD NOTE
           </button>

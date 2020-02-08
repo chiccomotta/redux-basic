@@ -1,7 +1,7 @@
 import React from "react"
 import { useSelector } from "react-redux"
 
-export const ShowNotes = () => {
+const ShowNotes = () => {
   const notes = useSelector(state => state.notes)
 
   return (
@@ -12,3 +12,5 @@ export const ShowNotes = () => {
     </ul>
   )
 }
+
+export default ShowNotes
