@@ -1,14 +1,21 @@
 import React from "react"
 import { render } from "react-dom"
 import { Provider } from "react-redux"
-import { createStore } from "redux"
+import { combineReducers, createStore } from "redux"
 import Counter from "./components/Counter"
 import Label from "./components/Label"
-import counter from "./reducers"
-import "@elastic/eui/dist/eui_theme_light.css"
 import LabelHook from "./components/LabelHook"
+import ShowNotes from "./components/ShowNotes"
+import counterReducer from "./reducers/counter"
+import notesReducer from "./reducers/notes"
+import "./site.css"
 
-const store = createStore(counter)
+const store = createStore(
+  combineReducers({
+    counter: counterReducer,
+    notes: notesReducer
+  })
+)
 
 render(
   <Provider store={store}>
@@ -16,6 +23,7 @@ render(
     <div>
       <Label />
       <LabelHook />
+      <ShowNotes />
     </div>
   </Provider>,
   document.getElementById("root")

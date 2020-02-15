@@ -17,7 +17,7 @@ class Label extends Component {
 }
 
 const mapStateToProps = state => {
-  return { value: state }
+  return { value: state.counter }
 }
 
 export default connect(mapStateToProps, null)(Label)

@@ -35,7 +35,7 @@ class Counter extends Component {
 }
 
 const mapStateToProps = state => {
-  return { value: state }
+  return { value: state.counter }
 }
 
 const mapDispatchToProps = dispatch => {
