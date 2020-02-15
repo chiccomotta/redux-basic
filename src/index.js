@@ -5,7 +5,7 @@ import { createStore } from "redux"
 import Counter from "./components/Counter"
 import Label from "./components/Label"
 import counter from "./reducers"
-import "./site.css"
+import "@elastic/eui/dist/eui_theme_light.css"
 import LabelHook from "./components/LabelHook"
 
 const store = createStore(counter)
