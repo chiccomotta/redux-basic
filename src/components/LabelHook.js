@@ -2,6 +2,7 @@ import React, { Fragment } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { AddNote, doReset } from "../reducers/actions"
 import { EuiFlexGrid, EuiButton, EuiFlexGroup, EuiFlexItem, EuiFieldNumber, EuiAvatar, EuiFormRow, EuiFieldText } from "@elastic/eui"
+import { EuiSpacer } from "@elastic/eui"
 
 const LabelHook = () => {
   // useSelector is analogous to connect’s mapStateToProps. You pass it a function that takes the Redux store state
@@ -16,7 +17,7 @@ const LabelHook = () => {
   return (
     <div style={style}>
       <EuiFlexGrid columns={2}>
-        <EuiFlexItem>
+        <EuiFlexItem grow={true}>
           <EuiFormRow label="Nome" display="columnCompressed" fullWidth>
             <EuiFieldText compressed />
           </EuiFormRow>
@@ -41,35 +42,34 @@ const LabelHook = () => {
           </EuiFlexGrid>
         </EuiFlexItem>
       </EuiFlexGrid>
+
+      <EuiSpacer size="m" />
+
+      <EuiFlexGroup style={{ maxWidth: 600 }}>
+        <EuiFlexItem grow={true}>
+          <EuiFormRow label="Age" display="columnCompressed">
+            <EuiFieldNumber max={10} placeholder={42} compressed />
+          </EuiFormRow>
+        </EuiFlexItem>
+        <EuiFlexItem>
+          <EuiFormRow label="Full name" display="columnCompressed">
+            <EuiFieldText icon="user" placeholder="John Doe" compressed />
+          </EuiFormRow>
+        </EuiFlexItem>
+      </EuiFlexGroup>
+
+      <EuiFlexGroup>
+        <EuiFlexItem>
+          <EuiFlexGroup>
+            <EuiFlexItem>
+              <EuiFormRow label="Nome" display="columnCompressed">
+                <EuiFieldText max={10} placeholder={42} compressed />
+              </EuiFormRow>
+            </EuiFlexItem>
+          </EuiFlexGroup>
+        </EuiFlexItem>
+      </EuiFlexGroup>
     </div>
-    // <EuiFlexGroup style={{ maxWidth: 900 }}>
-    //   <EuiFlexItem grow={false} style={{ width: 80 }}>
-    //     <EuiFormRow label="Age">
-    //       <EuiFieldNumber max={10} placeholder={42} />
-    //     </EuiFormRow>
-    //   </EuiFlexItem>
-    //   <EuiFlexItem style={{ width: 250 }} grow={false}>
-    //     <EuiFormRow label="Full name">
-    //       <>
-    //         <EuiFieldText icon="user" placeholder="John Doe" />
-    //         <br></br>
-    //         <EuiFormRow label="Second name">
-    //           <EuiFieldText icon="user" placeholder="John Doe" />
-    //         </EuiFormRow>
-    //       </>
-    //     </EuiFormRow>
-    //   </EuiFlexItem>
-    //   <EuiFlexItem grow={false}>
-    //     <EuiFormRow label="Avatar" display="center">
-    //       <EuiAvatar name="John Doe" size="s" />
-    //     </EuiFormRow>
-    //   </EuiFlexItem>
-    //   <EuiFlexItem grow={false}>
-    //     <EuiFormRow hasEmptyLabelSpace display="center">
-    //       <EuiButton>Save</EuiButton>
-    //     </EuiFormRow>
-    //   </EuiFlexItem>
-    // </EuiFlexGroup>
   )
 }
 
