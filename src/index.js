@@ -9,6 +9,7 @@ import ShowNotes from "./components/ShowNotes"
 import counterReducer from "./reducers/counter"
 import notesReducer from "./reducers/notes"
 import "./site.css"
+import "@elastic/eui/dist/eui_theme_light.css"
 
 const store = createStore(
   combineReducers({
