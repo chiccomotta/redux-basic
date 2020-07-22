@@ -2,41 +2,28 @@ form {
   width: 50%;
 }
 
-/* div {
-  padding-left: 10px;
-  margin: 10px;
+.label-width-50 label {
+  width: 100px;
 }
 
-button {
-  margin: 4px;
+.example-enter {
+  opacity: 0.01;
 }
 
-div.container {
-  height: 10em;
-  position: relative;
-}
-div.container p {
-  border: 1px solid black;
-  font-size: 2em;
-  margin: 0;
-  padding: 20px;
-  background: yellow;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
 }
 
-div.container-red p {
-  border: 1px solid black;
-  font-size: 2em;
-  margin: 0;
-  padding: 20px;
-  background: red;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-} */
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.pbig {
+  font-size: 1.6em;
+}

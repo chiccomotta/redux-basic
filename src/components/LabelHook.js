@@ -13,9 +13,9 @@ const LabelHook = () => {
   // so you can manually dispatch actions.
   const dispatch = useDispatch()
 
-  const style = { width: 900, margin: 10 }
+  const style = { width: 760, margin: 10 }
   return (
-    <div style={style}>
+    <div style={style} className="label-width-50">
       <EuiFlexGrid columns={2}>
         <EuiFlexItem grow={true}>
           <EuiFormRow label="Nome" display="columnCompressed" fullWidth>
@@ -43,7 +43,7 @@ const LabelHook = () => {
         </EuiFlexItem>
       </EuiFlexGrid>
 
-      <EuiSpacer size="m" />
+      {/* <EuiSpacer size="m" />
 
       <EuiFlexGroup style={{ maxWidth: 600 }}>
         <EuiFlexItem grow={true}>
@@ -68,7 +68,7 @@ const LabelHook = () => {
             </EuiFlexItem>
           </EuiFlexGroup>
         </EuiFlexItem>
-      </EuiFlexGroup>
+      </EuiFlexGroup> */}
     </div>
   )
 }

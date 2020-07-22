@@ -6,15 +6,16 @@ import Counter from "./components/Counter"
 import Label from "./components/Label"
 import LabelHook from "./components/LabelHook"
 import ShowNotes from "./components/ShowNotes"
+import { TodoList } from "./components/Animation"
 import counterReducer from "./reducers/counter"
 import notesReducer from "./reducers/notes"
-import "./site.css"
 import "@elastic/eui/dist/eui_theme_light.css"
+import "./site.css"
 
 const store = createStore(
   combineReducers({
     counter: counterReducer,
-    notes: notesReducer
+    notes: notesReducer,
   })
 )
 
@@ -25,6 +26,7 @@ render(
       <Label />
       <LabelHook />
       <ShowNotes />
+      <TodoList />
     </div>
   </Provider>,
   document.getElementById("root")
